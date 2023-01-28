@@ -1,0 +1,143 @@
+*,
+::after,
+::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.row-limit-max {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/* ----------- HEADER DESKTOP ---------- */
+
+#nav-top {
+    height: 73px;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+}
+
+#logo {
+    width: 160px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#logo-top {
+    height: 50px;
+    width: 30px;
+    margin-top: 5px;
+}
+
+#logo-text-top {
+    height: 30px;
+    width: 100px;
+}
+
+#menu-nav {
+    width: 520px;
+    display: flex;
+    align-items: center;
+}
+
+ul {
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #212832;
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.1rem;
+    line-height: 19px;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+
+/* ----------- MAIN DESKTOP ---------- */
+
+
+#main-section {
+    background-image: url(./img/main-image.png);
+    background-size: cover;
+    background-position: center;
+    height: 780px;
+    padding: 100px 0 100px 10%;
+    position: relative;;
+}
+
+#main-information {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+h3 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: #DF6951;
+}
+
+h1 {
+    font-family: 'Volkhov';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 5rem;
+    line-height: 89px;
+    letter-spacing: -0.04em;
+    color: #FFFFFF;
+    position: relative;
+}
+
+h1::after {
+    content: url(./img/Decore-h1.svg);
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+}
+
+p {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 30px;
+    color: #BFC0CD;
+}
+
+#btn-discover {
+    width: 203.86px;
+    height: 60px;
+    left: 148px;
+    top: 691.08px;
+    background: #F1A501;
+    box-shadow: 0px 20px 35px rgba(241, 165, 1, 0.15);
+    border-radius: 10px;
+    border: none;
+    color: #FFFFFF;
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+}
