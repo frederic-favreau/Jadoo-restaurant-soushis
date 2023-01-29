@@ -7,8 +7,8 @@
 }
 
 .row-limit-max {
-    width: 100%;
-    max-width: 1440px;
+    width: 100vw;
+    max-width: 650px;
     margin: 0 auto;
 }
 
@@ -16,15 +16,18 @@
 
 #nav-top {
     height: 73px;
+    min-width: 250px;
     display: flex;
     justify-content: space-between;
-    position: sticky;
+    width: 100vw;
+    max-width: 1440px;
+    padding: 0 5%;
+    margin: 0 auto;
 }
 
 #logo {
-    width: 160px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -37,37 +40,22 @@
 #logo-text-top {
     height: 30px;
     width: 100px;
+    margin-left: 10px;
 }
 
 #menu-nav {
-    width: 520px;
+    width: fit-content;
     display: flex;
     align-items: center;
 }
 
-ul {
-    width: 100%;
-    list-style-type: none;
-    display: flex;
-    justify-content: space-around;
-}
-
-ul li a {
-    text-decoration: none;
-    color: #212832;
-    font-family: 'Arial';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 1.1rem;
-    line-height: 19px;
-}
-
-ul li a:hover {
-    text-decoration: underline;
-}
-
-#menu-burger-mobile{
+.desktop-link-nav {
     display: none;
+}
+
+#menu-burger-mobile {
+    display: block;
+    margin-top: 40%;
 }
 
 
@@ -77,26 +65,31 @@ ul li a:hover {
 #main-section {
     background-image: url(./img/main-image.png);
     background-size: cover;
-    background-position: center;
-    height: 780px;
-    padding: 100px 0 100px 10%;
-    position: relative;;
+    min-height: 575px;
+    min-width: 250px;
+    max-height: 740px;
+    height: 90vh;
+    width: 100vw;
+    padding: 50px 15% 0 15%;
 }
 
 #main-information {
-    width: 40%;
-    height: 100%;
+    width: 100%;
+    height: 80%;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
 }
 
 h3 {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
-    font-size: 1.4rem;
-    line-height: 30px;
+    font-size: 1.2rem;
+    line-height: 18px;
     text-transform: uppercase;
     color: #DF6951;
 }
@@ -105,27 +98,29 @@ h1 {
     font-family: 'Volkhov';
     font-style: normal;
     font-weight: 700;
-    font-size: 5rem;
-    line-height: 89px;
+    font-size: 3rem;
+    line-height: 54px;
     letter-spacing: -0.04em;
     color: #FFFFFF;
     position: relative;
+    z-index: 9999;
 }
 
-h1::after {
+/* h1::after {
     content: url(./img/Decore-h1.svg);
     position: absolute;
-    bottom: -12px;
+    bottom: -5%;
     left: 0;
-}
+    z-index: 999;
+} */
 
-p {
+#main-information p {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
-    font-size: 1rem;
-    line-height: 30px;
-    color: #BFC0CD;
+    font-size: 0.9rem;
+    line-height: 18px;
+    color: #E6E8F3;
 }
 
 #btn-discover {
@@ -143,5 +138,84 @@ p {
     font-weight: 700;
     font-size: 18px;
     line-height: 21px;
-    text-align: center;
+}
+
+@media screen and (min-width:650px) {
+
+    #main-section {
+        background-image: url(./img/main-image.png);
+        background-size: cover;
+        min-height: 575px;
+        min-width: 250px;
+        max-height: 740px;
+        padding: 50px 0 100px 10%
+    }
+
+    #main-information {
+        width: 80%;
+        margin-right: 20%;
+        text-align: left;
+        align-items: flex-start;
+        min-height: 378px;
+        height: 40vh;
+    }
+}
+
+@media screen and (min-width:1050px) {
+
+    #main-section {
+        background-image: url(./img/main-image.png);
+        background-size: cover;
+        min-height: 575px;
+        min-width: 250px;
+        max-height: 740px;
+        padding: 50px 0 100px 10%
+    }
+
+    #main-information {
+        width: 50%;
+        margin-right: 50%;
+        text-align: left;
+        align-items: flex-start;
+        min-height: 378px;
+        height: 40vh;
+    }
+
+    #menu-burger-mobile {
+        display: none;
+    }
+
+    #menu-nav ul {
+        width: 550px;
+        height: 100%;
+        list-style-type: none;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .desktop-link-nav {
+        display: block;
+    }
+    
+    ul li a {
+        text-decoration: none;
+        color: #212832;
+        font-family: 'Arial';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.1rem;
+        line-height: 19px;
+    }
+    
+    ul li a:hover {
+        text-decoration: underline;
+    }
+
+    #main-information {
+        width: 50%;
+        margin-right: 50%;
+        min-height: 378px;
+        height: 40vh;
+    }
 }
