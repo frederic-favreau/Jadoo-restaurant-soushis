@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+body {
+    height: 5000px;
+}
+
 /* ----------- HEADER DESKTOP ---------- */
 
 #nav-top {
@@ -17,6 +21,10 @@
     max-width: 1600px;
     padding: 0 5%;
     margin: 0 auto;
+    position: sticky;
+    z-index: 9999;
+    top: 0;
+    transition: all 0.2s ease-in-out;
 }
 
 #logo {
@@ -97,7 +105,7 @@ h1 {
     letter-spacing: -0.04em;
     color: #FFFFFF;
     position: relative;
-    z-index: 9999;
+    z-index: 999;
 }
 
 /* h1::after {
@@ -105,7 +113,7 @@ h1 {
     position: absolute;
     bottom: -5%;
     left: 0;
-    z-index: 999;
+    z-index: 99;
 }  */
 
 #main-information p {
@@ -117,7 +125,7 @@ h1 {
     color: #E6E8F3;
 }
 
-#btn-discover {
+.btn-discover {
     width: 204px;
     height: 60px;
     background: #F1A501;
@@ -130,6 +138,7 @@ h1 {
     font-weight: 700;
     font-size: 18px;
     line-height: 21px;
+    display: block;
 }
 
 @media screen and (min-width:650px) {
@@ -231,6 +240,7 @@ h1 {
 #section-nouveauté {
     width: 100vw;
     min-width: 300px;
+    padding-top: 60px;
 }
 
 #section-nouveauté>span {
@@ -254,19 +264,22 @@ h1 {
     text-align: center;
     text-transform: capitalize;
     color: #14183E;
-    margin-top: 10px;
+    margin: 10px 0;
 }
 
 .container-card-menu {
     overflow: hidden;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     margin: 0 auto;
     width: 100%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
 }
 
 .container-card-menu article {
-    margin: 0 auto;
+    margin: 25px;
 }
 
 .card-menu {
@@ -279,6 +292,7 @@ h1 {
 
 .pict-top-card {
     height: 280px;
+    border-radius: 24px 24px 0 0;
 }
 
 .card-menu>p {
@@ -294,21 +308,20 @@ h1 {
 
 .container-card-maki {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    flex-direction: column;
     min-width: 250px;
     margin: 0 auto;
-    max-width: 100vw;
+    /* max-width: 1000px; */
     width: 100%;
 }
 
 .card-maki {
     display: flex;
     margin: 0 auto;
-    align-items: center;
-    width: 280px;
-
+    min-width: 280px;
+    width: 80vw;
+    justify-content: left;
 }
 
 .card-maki-description {
@@ -334,6 +347,183 @@ h1 {
     font-weight: 500;
     font-size: 1rem;
     line-height: 141%;
-    text-align: left;
     color: #5E6282;
+}
+
+#btn-section-discover {
+    margin: 0 auto;
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
+
+@media screen and (min-width:650px) {
+    .container-card-maki {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        min-width: 250px;
+        margin: 30px auto;
+        /* max-width: 1000px; */
+        width: fit-content;
+    }
+
+    .card-maki {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        align-items: center;
+        width: 280px;
+        position: relative
+    }
+
+    .card-maki:hover {
+        position: relative;
+        background-color: #FFFFFF;
+        box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+        border-radius: 25px;
+    }
+
+    .card-maki-description {
+        text-align: center;
+        padding-bottom: 30px;
+        max-width: 150px;
+    }
+}
+
+/* ----------- SECTION - VOYAGE - DESKTOP ---------- */
+
+#section-voyage {
+    width: 100vw;
+    background-image: url(./img/illustration_chef.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    top: 300px;
+    height: 300px;
+    margin-bottom: 300px;
+}
+
+#section-voyage>figure {
+    margin: 0 auto;
+}
+
+#section-voyage>figure>img {
+    width: 100%;
+    height: 300px;
+    margin: 0 auto;
+    position: absolute;
+    top: -300px;
+    left: 0;
+    object-fit: cover;
+}
+
+#btn-play {
+    position: absolute;
+    top: -140px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    border-radius: 50px;
+    z-index: 9999;
+}
+
+#section-voyage-description {
+    display: none;
+}
+
+#pict-intersection {
+    height: 620px;
+    width: 100vw;
+}
+
+#pict-intersection>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#pict-intersection>img:first-of-type {
+    margin-bottom: -5px;
+}
+
+@media screen and (min-width:650px) {
+    #section-voyage {
+        height: 1200px;
+        margin-bottom: 0;
+        top: 0;
+        padding: 300px 6%;
+    }
+
+    #section-voyage>figure>img {
+        width: 305px;
+        height: 164px;
+        margin: 0 auto;
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        object-fit: cover;
+        border-radius: 25px;
+    }
+
+    #btn-play {
+        position: absolute;
+        top: 130px;
+        left: 200px;
+        border-radius: 50px;
+        z-index: 9999;
+    }
+
+    #section-voyage-description {
+        display: flex;
+        justify-content: flex-start;
+        justify-content: space-between;
+        flex-direction: column;
+        max-width: 550px;
+        height: 550px;
+    }
+
+    #section-voyage-description>h1 {
+        font-family: 'Volkhov';
+        font-style: normal;
+        font-weight: 700;
+        line-height: 89px;
+        letter-spacing: -0.04em;
+        color: #FFFFFF;
+        font-size: 4.6rem;
+    }
+
+    #section-voyage-description>h5 {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 30px;
+        color: #FFFFFF;
+        width: 420px;
+    }
+
+    #pict-intersection {
+        display: inline-block;
+        position: relative;
+        width: 100%;
+    }
+
+    #pict-intersection>img {
+        width: 50%;
+        position: absolute;
+        top: -250px;
+    }
+
+    #pict-intersection>img:last-of-type {
+        right: 0;
+    }
+
+
+
+
+
+
+
 }
