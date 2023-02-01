@@ -7,7 +7,7 @@
 }
 
 body {
-    height: 5000px;
+    height: 6000px;
 }
 
 /* ----------- HEADER DESKTOP ---------- */
@@ -138,7 +138,6 @@ h1 {
     font-weight: 700;
     font-size: 18px;
     line-height: 21px;
-    display: block;
 }
 
 @media screen and (min-width:650px) {
@@ -403,6 +402,7 @@ h1 {
     top: 300px;
     height: 300px;
     margin-bottom: 300px;
+    z-index: 700;
 }
 
 #section-voyage>figure {
@@ -453,16 +453,16 @@ h1 {
         height: 1200px;
         margin-bottom: 0;
         top: 0;
-        padding: 300px 6%;
+        padding: 0 6%;
     }
 
     #section-voyage>figure>img {
         width: 305px;
         height: 164px;
-        margin: 0 auto;
-        position: absolute;
+        /* margin: 0 auto; */
+        position: relative;
+        left: 0;
         top: 50px;
-        left: 50px;
         object-fit: cover;
         border-radius: 25px;
     }
@@ -482,6 +482,7 @@ h1 {
         flex-direction: column;
         max-width: 550px;
         height: 550px;
+        margin-top: 100px;
     }
 
     #section-voyage-description>h1 {
@@ -508,22 +509,298 @@ h1 {
         display: inline-block;
         position: relative;
         width: 100%;
+        max-width: 1000px;
+        top: -250px;
     }
 
     #pict-intersection>img {
-        width: 50%;
         position: absolute;
-        top: -250px;
+        width: 50%;
+        top: -40px;
+        z-index: 899;
     }
 
     #pict-intersection>img:last-of-type {
         right: 0;
     }
+}
+
+@media screen and (min-width:1050px) {
+    #pict-intersection {
+        display: inline-block;
+        position: relative;
+        width: 50%;
+        top: -270px;
+        left: 0;
+    }
+}
 
 
+/* ----------- SECTION - Commander - DESKTOP ---------- */
 
 
+#section-commander {
+    margin-top: 300px;
+    padding-top: 400px;
+    text-align: center;
+    width: 100vw;
+}
 
+#article-container-sect-commander {
+    width: 90%;
+    margin: 0 auto;
+}
 
+#section-commander>article>h4 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.2rem;
+    line-height: 21px;
+    text-transform: uppercase;
+    color: #5E6282;
+}
 
+#section-commander>article>h2 {
+    font-family: 'Volkhov';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 51px;
+    color: #14183e;
+    margin-top: 10px;
+}
+
+#section-commander>article>h2>span {
+    color: #DF6951;
+}
+
+#section-commander>article>figure {
+    display: flex;
+    margin: 30px auto;
+}
+
+#section-commander>article>figure:last-of-type {
+    margin-bottom: 50px;
+}
+
+#section-commander>article>figure>img {
+    width: 60px;
+    margin-right: 15px;
+}
+
+#section-commander>article>figure>figcaption {
+    text-align: left;
+}
+
+#section-commander>article>figure>figcaption>span {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 124.5%;
+    color: #22232C;
+}
+
+#section-commander>article>figure>figcaption>p {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.9rem;
+    line-height: 137.5%;
+    color: #3E3F43;
+}
+
+#section-commander>article>button {
+    margin: 0 auto;
+    display: block;
+}
+
+@media screen and (min-width:650px) {
+    #section-commander {
+        margin-top: -650px;
+        padding-top: 400px;
+        background-image: url(./img/illustration_commander.jpg);
+        background-size: cover;
+        text-align: left;
+    }
+
+    #btn-discover-commander {
+        margin-left: 5%;
+        margin-bottom: 50px;
+    }
+
+    #section-commander>article>h2 {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (min-width:1050px) {
+    #section-commander>article>h2 {
+        font-size: 3.1rem;
+    }
+}
+
+/* ----------- SECTION - CONTACT - DESKTOP ---------- */
+
+#section-formulaire {
+    padding-top: 80px;
+    text-align: center;
+    width: 95vw;
+    margin: 0 auto;
+}
+
+#section-formulaire>h4 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.1rem;
+    line-height: 21px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #5E6282;
+    margin: 20px auto;
+}
+
+#section-formulaire>h2 {
+    font-family: 'Volkhov';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.2rem;
+    line-height: 142%;
+    text-align: center;
+    color: #14183E;
+    width: 80%;
+    margin: 10px auto;
+}
+
+#left-form>h5 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.9rem;
+    line-height: 20px;
+    text-align: center;
+    color: #8D8D8D;
+    width: 50%;
+    margin: 20px auto;
+}
+
+form {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+    margin: 0 auto;
+}
+
+#left-form>h4 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.1rem;
+    line-height: 28px;
+    color: #000000;
+}
+
+form>div {
+    margin-bottom: 20px;
+}
+
+form>label,
+form>input {
+    display: block;
+}
+
+#container-lastname,
+#container-firstname,
+#container-mail,
+#container-message {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+form>div>label {
+    font-size: 0.9rem;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    color: #000000;
+}
+
+form>div>input {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.8rem;
+    line-height: 28px;
+    color: #989898;
+    border: none;
+    border-bottom: 1px solid #e2e4e5;
+}
+
+#btn-form {
+    background: #007AFF;
+    font-size: 1.2rem;
+    height: 48px;
+    width: 140px;
+    border: none;
+    border-radius: 4px;
+    color: #FFFFFF;
+    box-shadow: 0px 20px 35px 5px rgb(11 54 59 / 15%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+}
+
+#btn-form>img {
+    margin-right: 5px;
+}
+
+@media screen and (min-width:650px) {
+    #container-form-picture {
+        width: 95%;
+        max-width: 1020px;
+        height: 580px;
+        margin: 20px auto;
+        display: flex;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        border-radius: 30px;
+        overflow: hidden;
+    }
+
+    #left-form {
+        text-align: left;
+        padding: 40px 7%;
+        margin: 0;
+    }
+
+    #left-form,
+    #right-form {
+        width: 50%;
+    }
+
+    #left-form>form {
+        margin: 0;
+    }
+
+    #left-form>h5 {
+        text-align: left;
+        margin: 10px 0;
+        width: 90%;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    #right-form {
+        background-image: url(./img/illustration_formulaire.jpg);
+        background-size: cover;
+        width: 50%;
+        height: 100%;
+    }
 }
