@@ -19,18 +19,18 @@
 </head>
 
 <body>
-    <header>
+    <header id="header">
         <nav id="nav-top">
             <div id="logo">
-                <img id="logo-top" src="./img/image 33.svg" alt="Logo Jadoo">
-                <img id="logo-text-top" src="./img/Jadoo.svg" alt="Jadoo">
+                <a href="#main-section"><img id="logo-top" src="./img/image 33.svg" alt="Logo Jadoo">
+                    <img id="logo-text-top" src="./img/Jadoo.svg" alt="Jadoo"></a>
             </div>
             <div id="menu-nav">
                 <ul>
-                    <li class="desktop-link-nav"><a href="#">Les nouveautés</a></li>
-                    <li class="desktop-link-nav"><a href="#">Découvrir</a> </li>
-                    <li class="desktop-link-nav"><a href="#">Commander</a></li>
-                    <li class="desktop-link-nav"><a href="#">Contactez-nous</a></li>
+                    <li class="desktop-link-nav"><a href="#section-nouveauté">Les nouveautés</a></li>
+                    <li class="desktop-link-nav"><a href="#section-voyage">Découvrir</a> </li>
+                    <li class="desktop-link-nav"><a href="#section-commander">Commander</a></li>
+                    <li class="desktop-link-nav"><a href="#section-formulaire">Contactez-nous</a></li>
                     <li id="menu-burger-mobile"><a href="#"><img src="./img/burger_icon.svg" alt="menu burger"></a></li>
                 </ul>
             </div>
@@ -39,11 +39,11 @@
     <main>
         <section id="main-section">
             <article id="main-information">
-                <h3>UN VOYAGE CULINAIRE gourmet et gourmand
+                <h3>UN VOYAGE CULINAIRE gourmet et gourmand.
                 </h3>
-                <h1>Bienvenue au restaurant Jadoo </h1>
-                <p>Jadoo vous accueille dans son ambiance zen et épurée, idéale pour découvrir ou redécouvrir la
-                    cuisine gastronomique du Chef Junichi IIDA. </p>
+                <h1>Bienvenue <br> au restaurant <br> Jadoo </h1>
+                <p>Jadoo vous accueille dans son ambiance zen et épurée, <br> idéale pour découvrir ou redécouvrir la
+                    cuisine <br> gastronomique du Chef Junichi IIDA. </p>
                 <button type="button" class="btn-discover">Découvrir la carte</button>
             </article>
         </section>
@@ -178,14 +178,53 @@
                             <label for="message">Message</label>
                             <input type="text" id="message" placeholder="Votre message/demande de réservation">
                         </div>
-                        <button type="submit" id="btn-form"><img src="./img/bouton_formulaire_coche.svg" alt="valider">Envoyer</button>
+                        <button type="submit" id="btn-form"><img src="./img/bouton_formulaire_coche.svg"
+                                alt="valider">Envoyer</button>
                     </form>
                 </div>
                 <div id="right-form"></div>
             </div>
-
         </section>
     </main>
+    <footer id="footer">
+        <div id="container-footer">
+            <div id="left-footer">
+                <div id="logo-footer">
+                    <img src="./img/logo_jadoo_footer.svg" alt="logo Jadoo" height="48px">
+                    <img src="./img/Jadoo.svg" alt="Jadoo" height="50px" width="165px">
+                </div>
+                <p id="pushlane">Un voyage gastronomique entre
+                    le Japon et la France</p>
+            </div>
+            <div id="middle-footer">
+                <div id="restaurant-footer">
+                    <span>Restaurant</span>
+                    <ul>
+                        <li><a href="#">Nouveautés</a></li>
+                        <li><a href="#">Découvrir</a></li>
+                        <li><a href="#">Commander</a></li>
+                    </ul>
+                </div>
+                <div id="contact-footer">
+                    <span>Contact</span>
+                    <ul>
+                        <li><a href="#">Prendre RDV</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="right-footer">
+                <img src="./img/logo_uberEats_footer.svg" alt="UberEats" height="30px" width="180px">
+                <span>Téléchargez UberEats</span>
+                <div class="btn-store-footer">
+                    <button type="button" id="btn-google"><img src="./img/logo_google_play.svg" alt="Google store">
+                        Google play</button>
+                    <button type="button" id="btn-apple"><img src="./img/logo_apple.svg" alt="logo Apple"> Apple
+                        store</button>
+                </div>
+            </div>
+        </div>
+        <p>Tout droits réservés @jadoo.com</p>
+    </footer>
 </body>
 
 </html>
